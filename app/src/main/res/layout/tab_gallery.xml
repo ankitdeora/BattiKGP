@@ -9,16 +9,26 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="You Are In Gallery Tab"
         android:id="@+id/textView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/id_ok"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PRESS"
         android:id="@+id/id_ok"
-        android:layout_below="@+id/textView"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_img"
+        android:layout_above="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp" />
+        android:layout_marginBottom="73dp"
+        android:src="@drawable/loading" />
 
 </RelativeLayout>
