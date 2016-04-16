@@ -12,4 +12,8 @@
         android:title="Contact us"
         />
 
+    <item android:id="@+id/id_developers"
+        android:title="Developers"
+        />
+
 </menu>

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Batti KGP</string>
+    <string name="contact_us">Electrical Engineering Department, IIT Kharagpur, West Midnapore, West–Bengal – 721302 Ph no:+91–8343997717</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

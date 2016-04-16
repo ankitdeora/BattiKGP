@@ -1,5 +1,6 @@
 package com.example.ankitdeora2856.battikgp;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -46,6 +47,7 @@ public class tabEvents extends Fragment {
     JSONArray events = null;
     ArrayList<HashMap<String, String>> eventList;
     ListView list;
+    ListAdapter myAdapter;
 
     ProgressDialog pDialog;
 
@@ -55,12 +57,13 @@ public class tabEvents extends Fragment {
         list = (ListView) v.findViewById(R.id.eventListView);
 
         eventList = new ArrayList<HashMap<String,String>>();
-        //System.out.println("before data");
+        //System.out.println("Around getdata1");
         getData();
+        //System.out.println("Around getdata2");
         //System.out.println("Inside list clickA");
-
         return v;
     }
+
 
     protected void showList(){
         try {
@@ -81,6 +84,9 @@ public class tabEvents extends Fragment {
                 events.put(TAG_DESCRIPTION,description);
                 eventList.add(events);
             }
+
+            //System.out.println("Around getdata3");
+
             //System.out.println("Inside try1");
             ListAdapter myAdapter = new SimpleAdapter(
                     getContext(), eventList, R.layout.event_list,
@@ -122,6 +128,7 @@ public class tabEvents extends Fragment {
             });
 
 
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -135,7 +142,13 @@ public class tabEvents extends Fragment {
     }
 
     private class GetDataJSON extends AsyncTask<String, Void, String> {
-
+        @Override
+        protected void onPreExecute()
+        {
+            pDialog = new ProgressDialog(getContext());
+            pDialog.setMessage("Loading...");
+            pDialog.show();
+        }
         @Override
         protected String doInBackground(String... params) {
             try {
@@ -184,10 +197,10 @@ public class tabEvents extends Fragment {
             if(result != null){
                 myJSON=result;
                 showList();
-                //pDialog.dismiss();
+                pDialog.dismiss();
 
             }else{
-                //pDialog.dismiss();
+                pDialog.dismiss();
                 Toast.makeText(getContext(), "Network Error", Toast.LENGTH_SHORT).show();
 
             }

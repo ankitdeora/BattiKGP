@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="About Us"
+        android:id="@+id/id_about_heading"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/logo"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher"
+        android:elevation="10dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Electrical Engineering Society ,IIT Kharagpur is a link between the faculty and the students of the Department of Electrical Engineering. It is the body, responsible for carrying out the various welfare programs for the students of the department, and to publicize about the opportunities and achievements regarding the students and faculties. The society is made up of a varied collection of individuals who are working together to organize events such as field trips, freshers' welcome, farewell, guest lectures, and interactive sessions."
+        android:id="@+id/id_about_description"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center_horizontal"
+        android:textSize="17sp"
+        android:layout_gravity="center" />
+
+</LinearLayout>

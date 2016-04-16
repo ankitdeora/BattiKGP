@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_s_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:focusableInTouchMode="true"
+    android:elevation="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Event Name"
+        android:id="@+id/id_s_name"
+        android:paddingStart="20dp"
+        android:paddingTop="12dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/id_s_date"
+        android:textSize="12sp"
+        android:paddingStart="25dp"
+        android:paddingBottom="3dp"
+        android:layout_below="@+id/id_s_name"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Venue"
+        android:id="@+id/id_s_venue"
+        android:textSize="13sp"
+        android:paddingStart="25dp"
+        android:paddingBottom="7dp"
+        android:layout_below="@+id/id_s_date"
+        android:layout_alignParentStart="true" />
+<!--
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/toggle"
+        android:layout_above="@+id/id_s_venue"
+        android:layout_alignParentEnd="true"
+        android:checked="false" />
+-->
+<!--
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reminder"
+        android:id="@+id/id_switch"
+        android:paddingTop="10dp"
+        android:paddingBottom="35dp"
+        android:paddingEnd="15dp"
+        android:checked="false"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/id_s_venue" />
+    -->
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/id_switch"
+        android:src="@drawable/reminder_bell_mdpi"
+        android:background="@drawable/reminder_button"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignBottom="@+id/id_s_venue"
+        android:layout_alignParentEnd="true"
+        android:baselineAlignBottom="false" />
+
+
+</RelativeLayout>
